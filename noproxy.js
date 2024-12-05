@@ -24,7 +24,7 @@ const getPublicIP = async () => {
 };
 
 const getTokens = () => {
-    return fs.readFileSync('single.txt', 'utf8').split('\n').map(line => line.trim()).filter(Boolean);
+    return fs.readFileSync('token.txt', 'utf8').split('\n').map(line => line.trim()).filter(Boolean);
 };
 
 const shareBandwidth = async (token, index) => {
