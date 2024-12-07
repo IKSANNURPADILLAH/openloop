@@ -1,3 +1,4 @@
+//support multi token with proxy
 import fetch from 'node-fetch';
 import fs from 'fs';
 import chalk from 'chalk';
