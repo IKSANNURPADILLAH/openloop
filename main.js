@@ -1,3 +1,4 @@
+//support multi token with proxy
 import fetch from 'node-fetch';
 import fs from 'fs';
 import chalk from 'chalk';
@@ -33,7 +34,7 @@ const shareBandwidth = async (token, proxy, index) => {
         const quality = getRandomQuality();
 
         // Log only the index (serial number) of the token being processed
-        // logger(`Starting bandwidth share for token #${chalk.green(index + 1)} with proxy: ${chalk.cyan(proxy)}`, 'debug');
+         logger(`Starting bandwidth share for token #${(index + 1)} with proxy: ${chalk.cyan(proxy)}`, 'debug');
 
         const response = await makePostRequestWithProxy('https://api.openloop.so/bandwidth/share', {
             'Authorization': `Bearer ${token}`,
@@ -55,7 +56,7 @@ const shareBandwidth = async (token, proxy, index) => {
 
         logBandwidthShareResponse(data);
     } catch (error) {
-        logger(`Error sharing bandwidth for token #${chalk.green(index + 1)} with proxy: ${chalk.cyan(proxy)}`, 'error', error.message);
+        logger(`Error sharing bandwidth for token #${(index + 1)} with proxy: ${chalk.cyan(proxy)}`, 'error', error.message);
     }
 };
 
