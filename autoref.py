@@ -48,7 +48,7 @@ headers = {
 
 # Fungsi untuk menghasilkan email acak
 def generate_email():
-    email_domains = ["@yopmail.com"]
+    email_domains = ["@ab34.fr"]
     username = fake.user_name()[:15] + ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
     return f"{username}{random.choice(email_domains)}"
 
@@ -78,10 +78,14 @@ def login_user(login_data):
 
 #banner
 banner = """
-****************************************
-*   Openloop.so ACCOUNT REGISTRATION   *
-*         Creator : Ace Market         *
-****************************************
+███████╗██╗  ██╗███████╗██╗███████╗      ██████╗  ██████╗ ███╗   ██╗███████╗
+██╔════╝██║  ██║██╔════╝╚═╝██╔════╝     ██╔════╝ ██╔═══██╗████╗  ██║██╔════╝
+███████╗███████║█████╗     ███████╗     ██║  ███╗██║   ██║██╔██╗ ██║█████╗  
+╚════██║██╔══██║██╔══╝     ╚════██║     ██║   ██║██║   ██║██║╚██╗██║██╔══╝  
+███████║██║  ██║███████╗   ███████║     ╚██████╔╝╚██████╔╝██║ ╚████║███████╗
+╚══════╝╚═╝  ╚═╝╚══════╝   ╚══════╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+
+                    Openloop.so Autoreff Python Version
 """
 # Print banner
 print(banner)
